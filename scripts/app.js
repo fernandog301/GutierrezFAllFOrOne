@@ -4,6 +4,7 @@ let sumOfTwoNumbers2 = document.getElementById("sumOfTwoNumbers2");
 
 
 
+let summitOne = document.getElementById("summitOne")
 
 let User;
 const SayHelloCall = async (User) => {
@@ -18,8 +19,10 @@ summitOne.addEventListener("click", function(){
     alert("Hello")
 });
 }
+let sumOfTwoNumbersBtn = document.getElementById("sumOfTwoNumbersBtn")
 
-
+let Answer1;
+let Answer2
 const SumOfTwoNumbers = async (Answer1 , Answer2) => {
     const promise = await fetch(`https://gutierrezfallforone.azurewebsites.net/MiniChallengeTwo/GreaterOrLess/${Answer1}/${Answer2}`);
     const data = await promise.text();
@@ -75,7 +78,7 @@ if(GreaterOrLessBtn){
 
 
 // Odd Or Even
-let oddOrEvenInput = document.getElementById("oddOrEven")
+let oddOrEvenInput = document.getElementById("oddOrEvenInput")
 let oddOrEvenBtn = document.getElementById("oddOrEvenBtn")
 
 const oddOrEven = async (numberThree) => {
@@ -104,8 +107,8 @@ const reverseItWord = async (numberFour) => {
     reverseItWordOneDiv.innerText = data;
 }
 
-if(reverseItWordBtn){
-    reverseItWordBtn.addEventListener("click", function () {
+if(reverseItWordOneBtn){
+    reverseItWordOneBtn.addEventListener("click", function () {
         numberOne = reverseItWordOne.value;
         reverseItWord(numberFour);
     })
@@ -167,8 +170,6 @@ if(madLibsBtn){
 
 
 
-let summitOne = document.getElementById("summitOne")
-let sumOfTwoNumbersBtn = document.getElementById("sumOfTwoNumbersBtn")
 
 // magic 8 ball
 let yourQuestion = document.getElementById("yourQuestion")
@@ -191,7 +192,7 @@ if(yourQuestionBtn){
 
 
 // restaurantPicker 
-let restaurantPickerInput = document.getElementById("restaurantPicker")
+let restaurantPickerInput = document.getElementById("restaurantPickerInput")
 let restaurantPickerBtn = document.getElementById("restaurantPickerBtn")
 
 const restaurantPicker = async () => {
